@@ -15,7 +15,7 @@ async function logEvent({ service='auth-service', level, event, userId, ip, meth
                              method, path, status_code: statusCode, message, meta })
     });
   } catch (_) {
-    // ถ้า log service ไม่ตอบ ไม่ต้องหยุดการทำงาน
+    // ถ้า log service ไม่ตอบ ไม่ต้องหยุดการทำงานห
   }
 }
 
