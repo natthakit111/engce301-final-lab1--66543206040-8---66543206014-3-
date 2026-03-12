@@ -543,6 +543,51 @@
 </div>
 
 <!-- Modals + Toast — copy จาก Week 12 -->
+ <!-- ════════════════════════════════════
+     MODALS
+════════════════════════════════════ -->
+<!-- Create/Edit Task Modal -->
+<div id="task-modal" class="modal-overlay hidden">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="modal-title">สร้าง Task ใหม่</h3>
+      <button class="btn-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="modal-task-id">
+      <div class="form-group">
+        <label>ชื่อ Task *</label>
+        <input id="modal-task-title" placeholder="เช่น: ออกแบบ UI หน้า Login">
+      </div>
+      <div class="form-group">
+        <label>รายละเอียด</label>
+        <textarea id="modal-task-desc" placeholder="อธิบายงานที่ต้องทำ..."></textarea>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+        <div class="form-group">
+          <label>สถานะ</label>
+          <select id="modal-task-status">
+            <option value="TODO">⬜ TODO</option>
+            <option value="IN_PROGRESS">🔄 In Progress</option>
+            <option value="DONE">✅ Done</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>ความสำคัญ</label>
+          <select id="modal-task-priority">
+            <option value="low">🟢 Low</option>
+            <option value="medium" selected>🟡 Medium</option>
+            <option value="high">🔴 High</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-secondary" onclick="closeModal()">ยกเลิก</button>
+      <button class="btn-submit" id="modal-submit-btn" onclick="submitTask()">💾 บันทึก</button>
+    </div>
+  </div>
+</div>
 <!-- Confirm Delete Modal -->
 <div id="confirm-modal" class="modal-overlay hidden">
   <div class="modal" style="max-width:400px">
@@ -941,6 +986,24 @@ function renderJwtInspector() {
 ───────────────────────────────────── */
 function escHtml(s) {
   return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+/* ─────────────────────────────────────
+   API HELPERS
+───────────────────────────────────── */
+function authHeaders() {
+  return {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${token}`
+  };
+}
+
+async function apiFetch(url, options = {}) {
+  options.headers = {
+    'Content-Type': 'application/json',
+    ...(options.headers || {})
+  };
+  return fetch(url, options);
 }
 
 // Close modals on overlay click

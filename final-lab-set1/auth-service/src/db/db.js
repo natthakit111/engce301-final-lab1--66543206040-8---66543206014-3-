@@ -1,22 +1,19 @@
-const { Pool } = require('pg');
+import pkg from 'pg';
+const { Pool } = pkg;
 
-const pool = new Pool({
-  host:     process.env.DB_HOST     || 'auth-db',
-  port:     parseInt(process.env.DB_PORT) || 5432,
-  database: process.env.DB_NAME     || 'auth_db',
-  user:     process.env.DB_USER     || 'auth_user',
-  password: process.env.DB_PASSWORD || 'auth_secret',
+export const pool = new Pool({
+  host: process.env.DB_HOST || 'auth-db',
+  port: 5432,
+  database: process.env.DB_NAME || 'auth_db',
+  user: process.env.DB_USER || 'postgres',
+  password: process.env.DB_PASSWORD || 'postgres'
 });
 
-// Auto-create tables on startup
-async function initDB() {
-  const fs = require('fs');
-  const path = require('path');
-  const sql = fs.readFileSync(
-    path.join(__dirname, 'init.sql'), 'utf8'
-  );
-  await pool.query(sql);
-  console.log('[auth-db] Tables initialized');
+export async function initDB() {
+  try {
+    await pool.query('SELECT 1');
+    console.log('[auth-service] DB Connected');
+  } catch (err) {
+    console.error('[auth-service] DB Error', err);
+  }
 }
-
-module.exports = { pool, initDB };

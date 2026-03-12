@@ -66,21 +66,21 @@ INSERT INTO users (username, email, password_hash, role) VALUES
   (
     'alice',
     'alice@lab.local',
-    '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy',
+    '$2b$10$lYwLFHYKymqwR.KqzjnBzenGeJIw9NJgjNJ/YHmDh53WP6bPivNGy',
     -- plain-text password: alice123
     'member'
   ),
   (
     'bob',
     'bob@lab.local',
-    '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2uheWG/igi.',
+    '$2b$10$g4rcgyBYIMHWtnJiMPYyJucKl7EkWwWtRRjNwoui7tdV2y7AecwzK',
     -- plain-text password: bob456
     'member'
   ),
   (
     'admin',
     'admin@lab.local',
-    '$2a$10$TbAyBo.OirXRwMvBVMGgXeuHfzaOGicB5K3jZ1WZUD/pDYdm6GS7C',
+    '$2b$10$dUoUNhcHdQmsLzHCo5qyw.WsbEnjB3tGNqPCyHcmCSrymICYN.Ucm',
     -- plain-text password: adminpass
     'admin'
   )
