@@ -410,12 +410,12 @@ curl https://localhost/api/tasks \
 
 ## 17. System Screenshots
 
-โฟลเดอร์ `screenshots/` มีหลักฐานการทดสอบระบบ
+โฟลเดอร์ `final-lab-set1/screenshots/` มีหลักฐานการทดสอบระบบ
 
 ### Docker Containers Running
 
 <p align="center">
-<img src="screenshots/01_docker_running.png" width="900"/>
+<img src="final-lab-set1/screenshots/01_docker_running.png" width="900"/>
 </p>
 
 ---
@@ -423,7 +423,7 @@ curl https://localhost/api/tasks \
 ### HTTPS Access via Browser
 
 <p align="center">
-<img src="screenshots/02_https_browser.png" width="900"/>
+<img src="final-lab-set1/screenshots/02_https_browser.png" width="900"/>
 </p>
 
 ---
@@ -431,7 +431,7 @@ curl https://localhost/api/tasks \
 ### Login Success
 
 <p align="center">
-<img src="screenshots/03_login_success.png" width="900"/>
+<img src="final-lab-set1/screenshots/03_login_success.png" width="900"/>
 </p>
 
 ---
@@ -439,7 +439,7 @@ curl https://localhost/api/tasks \
 ### Login Failed
 
 <p align="center">
-<img src="screenshots/04_login_fail.png" width="900"/>
+<img src="final-lab-set1/screenshots/04_login_fail.png" width="900"/>
 </p>
 
 ---
@@ -447,7 +447,7 @@ curl https://localhost/api/tasks \
 ### Create Task
 
 <p align="center">
-<img src="screenshots/05_create_task.png" width="900"/>
+<img src="final-lab-set1/screenshots/05_create_task.png" width="900"/>
 </p>
 
 ---
@@ -455,7 +455,7 @@ curl https://localhost/api/tasks \
 ### Get Tasks API
 
 <p align="center">
-<img src="screenshots/06_get_tasks.png" width="900"/>
+<img src="final-lab-set1/screenshots/06_get_tasks.png" width="900"/>
 </p>
 
 ---
@@ -463,7 +463,7 @@ curl https://localhost/api/tasks \
 ### Update Task
 
 <p align="center">
-<img src="screenshots/07_update_task.png" width="900"/>
+<img src="final-lab-set1/screenshots/07_update_task.png" width="900"/>
 </p>
 
 ---
@@ -471,7 +471,7 @@ curl https://localhost/api/tasks \
 ### Delete Task
 
 <p align="center">
-<img src="screenshots/08_delete_task.png" width="900"/>
+<img src="final-lab-set1/screenshots/08_delete_task.png" width="900"/>
 </p>
 
 ---
@@ -479,7 +479,7 @@ curl https://localhost/api/tasks \
 ### Unauthorized Request (No JWT)
 
 <p align="center">
-<img src="screenshots/09_no_jwt_401.png" width="900"/>
+<img src="final-lab-set1/screenshots/09_no_jwt_401.png" width="900"/>
 </p>
 
 ---
@@ -487,7 +487,7 @@ curl https://localhost/api/tasks \
 ### Logs API
 
 <p align="center">
-<img src="screenshots/10_logs_api.png" width="900"/>
+<img src="final-lab-set1/screenshots/10_logs_api.png" width="900"/>
 </p>
 
 ---
@@ -495,7 +495,7 @@ curl https://localhost/api/tasks \
 ### Rate Limiting Test
 
 <p align="center">
-<img src="screenshots/11_rate_limit.png" width="900"/>
+<img src="final-lab-set1/screenshots/11_rate_limit.png" width="900"/>
 </p>
 
 ## 18. ปัญหาที่พบและวิธีแก้
